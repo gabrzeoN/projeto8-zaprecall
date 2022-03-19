@@ -1,13 +1,15 @@
-export default function ScreenOne(){
-    function changeScreen(){}
+import Logo from "./../assets/img/logo.png";
 
-    return(
-        <div class="screen-1 ">
-          <div class="logo">
-            <img src="./assets/img/logo.png" alt="ZapRecall logo" />
-            <h1>ZapRecall</h1>
-          </div>
-          <button onClick={() => changeScreen('2')}>Iniciar Recall!</button>
+export default function ScreenOne(props) {
+  const { setScreen } = props;
+
+  return (
+    <div class="screen-1 ">
+      <div class="logo">
+        <img src={Logo} alt="ZapRecall logo" />
+        <h1>ZapRecall</h1>
       </div>
-    );
+      <button onClick={() => setScreen('2')}>Iniciar Recall!</button>
+    </div>
+  );
 }

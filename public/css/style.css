@@ -1,9 +1,18 @@
+:root {
+    --background-color: #FB6B6B;
+    --primary-color: #EC362D;
+    --gradiente-black: linear-gradient(to bottom, #00000000 0%, #00000000 40%, #000000a1 100%);
+    --correct-answer: #2FBE34;
+    --correct-answer-2: #FF922E;
+    --wron-answer: #FF3030;
+}
+
 *{
     box-sizing: border-box;
 }
 
 body{
-    background-color: #FB6B6B;
+    background-color: var(--background-color);
     font-family: 'Recursive', sans-serif;
 }
 
@@ -79,10 +88,68 @@ header h1{
     color: #FFFFFF;
 }
 
+main{
 
+}
 
+main ul{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+main li{
+    margin: 3px 0px;
+    width: 182px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 6px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
 
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+}
+
+main li ion-icon{
+    font-size: 22px;
+}
+
+footer{
+    padding: 16px 0px;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .zap-finished{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+footer .zap-finished img{
+    margin-right: 10px;
+}
+
+footer .zap-status{
+    padding: 0px 150px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer .answers-icons{
+    font-size: 20px;
+    color: red;
+}
 
 .hidden{
     display: none;

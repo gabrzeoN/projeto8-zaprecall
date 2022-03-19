@@ -31,15 +31,15 @@ body{
 }
 
 .screen-1 .logo img{
-    width: 55px;
-    height: 65px;
+    width: 136px;
+    height: 151px;
 
 }
 
 .screen-1 h1{
     font-family: 'Righteous';
-    font-size: 25px;
-    line-height: 31px;
+    font-size: 36px;
+    line-height: 45px;
     display: flex;
     align-items: center;
     text-align: center;

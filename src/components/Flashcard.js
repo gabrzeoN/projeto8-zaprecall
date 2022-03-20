@@ -1,35 +1,29 @@
 import { useState } from "react";
-import Turn from "./../assets/img/turn.png";
+
+import FlashcardPageName from "./FlashcardPageName";
+import FlashcardPageQuestion from "./FlashcardPageQuestion";
+import FlashcardPageAnswer from "./FlashcardPageAnswer";
+import FlashcardPageAnswered from "./FlashcardPageAnswered";
 
 export default function Flashcard(props) {
     const { name, question, answer } = props;
-    const [flashcardStatus, setFlashCardStatus] = useState("answer")
+    const [flashcardPage, setFlashCardPage] = useState("name"); //name, question, answer, zap, notZap, notRight
 
-    if (flashcardStatus === "name") {
+    if (flashcardPage === "name") {
         return (
-            <li className="flashcard name" >
-                <h2>{name}</h2>
-                <ion-icon name="play-outline" onClick={() => setFlashCardStatus("question")} ></ion-icon>
-            </li>
+            <FlashcardPageName name={name} setFlashCardPage={setFlashCardPage} />
         );
-    } else if (flashcardStatus === "question") {
+    } else if (flashcardPage === "question") {
         return (
-            <li className="flashcard question">
-                <h2>{question}</h2>
-                <img src={Turn} alt="Virar carta" onClick={() => setFlashCardStatus("answer")} />
-            </li>
+            <FlashcardPageQuestion question={question} setFlashCardPage={setFlashCardPage} />
         );
-    } else if (flashcardStatus === "answer") {
+    } else if (flashcardPage === "answer") {
         return (
-            <li className="flashcard answer">
-                <h2>{answer}</h2>
-                <div>
-                    <button onClick={() => setFlashCardStatus("name")} >Não lembrei</button>
-                    <button onClick={() => setFlashCardStatus("name")} >Quase não lembrei</button>
-                    <button onClick={() => setFlashCardStatus("name")} >Zap!</button>
-                </div>
-            </li>
+            <FlashcardPageAnswer answer={answer} setFlashCardPage={setFlashCardPage} />
+        );
+    } else if (flashcardPage === "zap" || flashcardPage === "notZap" || flashcardPage === "notRight") {
+        return (
+            <FlashcardPageAnswered name={name} buttonClicked={flashcardPage} />
         );
     }
-
 }

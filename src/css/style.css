@@ -200,7 +200,25 @@ main .flashcard.answer button:nth-child(2){
 
 main .flashcard.answer button:last-child{
     background-color: var(--correct-answer);
-}    
+}
+
+main .flashcard.name.zap{
+    color: var(--correct-answer);
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+main .flashcard.name.notZap{
+    color: var(--correct-answer-2);
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+main .flashcard.name.notRight{
+    color: var(--wron-answer);
+    font-style: italic;
+    text-decoration: line-through;
+} 
 
 footer{
     padding: 16px 0px;

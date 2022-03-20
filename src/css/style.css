@@ -156,7 +156,7 @@ main .flashcard.question img{
 main .flashcard.answer{
     margin: 23px 0px;
     width: 299px;
-    height: 131px;
+    /* height: 131px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -171,6 +171,36 @@ main .flashcard.answer{
     line-height: 22px;
     color: #333333;
 }
+
+main .flashcard.answer div{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+main .flashcard.answer button{
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 0px;
+    width: 80px;
+    height: 37px;
+}
+
+main .flashcard.answer button:first-child{
+    background-color: var(--wron-answer);
+}
+
+main .flashcard.answer button:nth-child(2){
+    background-color: var(--correct-answer-2);
+}
+
+main .flashcard.answer button:last-child{
+    background-color: var(--correct-answer);
+}    
 
 footer{
     padding: 16px 0px;

@@ -52,10 +52,7 @@ export default function Flashcards() {
             {
                 flashcards.map(({ name, question, answer }) => {
                     return (
-                        <>
                             <Flashcard name={name} question={question} answer={answer} />
-                            {/* <Flashcard name={name} question={question} answer={answer} /> */}
-                        </>
                     );
                 })
             }

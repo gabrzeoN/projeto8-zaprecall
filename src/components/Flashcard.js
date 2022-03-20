@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Turn from "./../assets/img/turn.png";
 
-export default function Flashcard(props){
-    const {name, question, answer} = props;
+export default function Flashcard(props) {
+    const { name, question, answer } = props;
     const [flashcardStatus, setFlashCardStatus] = useState("answer")
 
     if (flashcardStatus === "name") {

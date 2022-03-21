@@ -9,3 +9,4 @@ export default function sortQuestionOrder(array){
         array[i].name = `Pergunta ${i + 1}`
     }
 }
+

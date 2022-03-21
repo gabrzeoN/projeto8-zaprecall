@@ -6,7 +6,7 @@ import FlashcardPageAnswer from "./FlashcardPageAnswer";
 import FlashcardPageAnswered from "./FlashcardPageAnswered";
 
 export default function Flashcard(props) {
-    const { name, question, answer } = props;
+    const { name, question, answer, increseQuestionsAnswered, setIcon } = props;
     const [flashcardPage, setFlashCardPage] = useState("name"); //name, question, answer, zap, notZap, notRight
 
     if (flashcardPage === "name") {
@@ -19,11 +19,14 @@ export default function Flashcard(props) {
         );
     } else if (flashcardPage === "answer") {
         return (
-            <FlashcardPageAnswer answer={answer} setFlashCardPage={setFlashCardPage} />
+            <FlashcardPageAnswer answer={answer} setFlashCardPage={setFlashCardPage} increseQuestionsAnswered={increseQuestionsAnswered} setIcon={setIcon} />
         );
     } else if (flashcardPage === "zap" || flashcardPage === "notZap" || flashcardPage === "notRight") {
         return (
-            <FlashcardPageAnswered name={name} buttonClicked={flashcardPage} />
+            <FlashcardPageAnswered
+                name={name}
+                buttonClicked={flashcardPage}
+            />
         );
     }
 }

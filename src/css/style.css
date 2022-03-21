@@ -2,7 +2,7 @@
     --main-background-color: #FB6B6B;
     --correct-answer: #2FBE34;
     --correct-answer-2: #FF922E;
-    --wron-answer: #FF3030;
+    --wrong-answer: #FF3030;
 }
 
 *{
@@ -94,7 +94,8 @@ header h1{
 }
 
 main{
-    margin: 160px 0px;
+    margin-top: 150px;
+    margin-bottom: 180px;
 }
 
 main .flashcards{
@@ -191,7 +192,7 @@ main .flashcard.answer button{
 }
 
 main .flashcard.answer button:first-child{
-    background-color: var(--wron-answer);
+    background-color: var(--wrong-answer);
 }
 
 main .flashcard.answer button:nth-child(2){
@@ -215,10 +216,10 @@ main .flashcard.name.notZap{
 }
 
 main .flashcard.name.notRight{
-    color: var(--wron-answer);
     font-style: italic;
     text-decoration: line-through;
-} 
+    color: var(--wrong-answer);
+}
 
 footer{
     padding: 16px 0px;
@@ -232,6 +233,9 @@ footer{
     bottom: 0px;
     left: 0px;
     right: 0px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
 }
 
 footer .zap-finished{
@@ -240,18 +244,40 @@ footer .zap-finished{
 }
 
 footer .zap-finished img{
-    margin-right: 10px;
+    margin-right: 20px;
+    width: 23px;
+    height: 23px;
 }
 
-footer .zap-status{
-    padding: 0px 150px;
+footer .zap-finished p{
+    font-weight: bold;
+}
+
+footer .zap-finish-text{
+    padding: 0px 130px;
     text-align: center;
     margin-bottom: 10px;
 }
 
+footer .zap-status{
+    
+}
+
 footer .answers-icons{
-    font-size: 20px;
-    color: red;
+    font-size: 25px;
+}
+
+ion-icon[name="checkmark-circle"]{
+    color: var(--correct-answer);
+}
+
+ion-icon[name="help-circle"]{
+    color: var(--correct-answer-2);
+}
+
+
+ion-icon[name="close-circle"]{
+    color: var(--wrong-answer);
 }
 
 .hidden{

@@ -1,9 +1,9 @@
 import Flashcards from "./Flashcards";
 
-export default function Main() {
+export default function Main({ increseQuestionsAnswered, setIcon}) {
     return (
         <main>
-            <Flashcards />
+            <Flashcards increseQuestionsAnswered={increseQuestionsAnswered} setIcon={setIcon} />
         </main>
     );
 }

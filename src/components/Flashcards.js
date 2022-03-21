@@ -46,13 +46,19 @@ const flashcards = [
 
 sortQuestionOrder(flashcards);
 
-export default function Flashcards() {
+export default function Flashcards( {increseQuestionsAnswered, setIcon} ) {
     return (
         <ul className="flashcards" >
             {
                 flashcards.map(({ name, question, answer }) => {
                     return (
-                            <Flashcard name={name} question={question} answer={answer} />
+                            <Flashcard
+                                name={name}
+                                question={question}
+                                answer={answer}
+                                increseQuestionsAnswered={increseQuestionsAnswered}
+                                setIcon={setIcon}
+                            />
                     );
                 })
             }

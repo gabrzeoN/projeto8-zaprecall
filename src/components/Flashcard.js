@@ -7,7 +7,7 @@ import FlashcardPageAnswered from "./FlashcardPageAnswered";
 
 export default function Flashcard(props) {
     const { name, question, answer, increseQuestionsAnswered, setIcon } = props;
-    const [flashcardPage, setFlashCardPage] = useState("name"); //name, question, answer, zap, notZap, notRight
+    const [flashcardPage, setFlashCardPage] = useState("name"); //Possible states: name, question, answer, zap, notZap, notRight.
 
     if (flashcardPage === "name") {
         return (

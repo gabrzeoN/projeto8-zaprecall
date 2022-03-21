@@ -24,15 +24,3 @@ export default function ScreenTwo() {
         </div>
     );
 }
-
-
-
-
-
-/*
-    
-    ScreenTwo ->    Header
-                    Main        Flashcards      Flashcard   FlashcardsPageAnswer
-                    Footer
-    
-*/

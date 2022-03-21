@@ -9,8 +9,6 @@ export default function FlashcardPageAnswered({ name, buttonClicked }) {
         icon = "close-circle";
     }
 
-    
-
     return (
         <>
             <li className={`flashcard name ${buttonClicked}`} >
@@ -20,8 +18,3 @@ export default function FlashcardPageAnswered({ name, buttonClicked }) {
         </>
     );
 }
-
-
-// <ion-icon name="checkmark-circle"></ion-icon>
-// <ion-icon name="help-circle"></ion-icon>
-// <ion-icon name="close-circle"></ion-icon>

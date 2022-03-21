@@ -1,4 +1,3 @@
-
 const icons = [
     "checkmark-circle",
     "help-circle",
@@ -10,7 +9,6 @@ export default function FlashcardPageAnswer({ answer, setFlashCardPage, increseQ
     function compareAnswer(text){
         increseQuestionsAnswered(1);
         setFlashCardPage(text);
-
         if(text === "notRight"){
             setIcon("close-circle")
         }else if(text === "notZap"){

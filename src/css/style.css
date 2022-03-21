@@ -15,8 +15,6 @@ body{
 }
 
 .screen-1{
-    /* font-family: 'Recursive', sans-serif; */  
-    /* background-color: rgb(94, 94, 48); */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -67,7 +65,6 @@ header{
     justify-content: center;
     align-items: center;
     padding: 48px 0px;
-    /* background-color: aqua; */
     background-color: var(--main-background-color);
     position: fixed;
     top: 0px;
@@ -99,7 +96,6 @@ main{
 }
 
 main .flashcards{
-    /* margin-top: 50px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,11 +153,9 @@ main .flashcard.question img{
 main .flashcard.answer{
     margin: 23px 0px;
     width: 299px;
-    /* height: 131px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: flex-start; */
     padding: 18px 20px 5px 20px;
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
@@ -177,7 +171,6 @@ main .flashcard.answer div{
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
 }
 
 main .flashcard.answer button{
@@ -257,10 +250,6 @@ footer .zap-finish-text{
     padding: 0px 130px;
     text-align: center;
     margin-bottom: 10px;
-}
-
-footer .zap-status{
-    
 }
 
 footer .answers-icons{

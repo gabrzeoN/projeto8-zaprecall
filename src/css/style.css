@@ -280,6 +280,63 @@ ion-icon[name="close-circle"]{
     color: var(--wrong-answer);
 }
 
-.hidden{
-    display: none;
+@media (max-width: 500px){
+    main{
+        margin-bottom: 220px;
+    }
+}
+
+@media (min-width: 1400px){
+    main{
+        /* margin-bottom: 220px; */
+        margin-top: 200px;
+    }
+
+    header img{
+        width: 85px;
+        height: 100px;
+        margin-right: 35px;
+    }
+    
+    header h1{
+        font-size: 64px;
+        line-height: 79px;
+    }
+
+    main .flashcard.name{  
+        width: 560px;
+        height: 90px;
+        padding: 10px 30px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    main .flashcard.name ion-icon{
+        font-size: 45px;
+    }
+
+    main .flashcard.question{
+        width: 560px;
+        height: 131px;
+        font-size: 26px;
+        line-height: 33px;
+    }
+
+    main .flashcard.question img{
+        width: 40px;
+        height: 25px;
+    }
+
+    main .flashcard.answer{
+        width: 560px;
+        font-size: 26px;
+        line-height: 33px;
+    }
+    
+    main .flashcard.answer button{
+        margin-bottom: 10px;
+        font-size: 16px;
+        width: 160px;
+        height: 50px;
+    }
 }
